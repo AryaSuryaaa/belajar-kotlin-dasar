@@ -66,5 +66,23 @@ fun main(args: Array<String>) {
         Line 3
     """.trimIndent()
 
+    // Memanggul fungsi yang dibuat
+    val user = setUser("Arya Surya", 20)
+    print(user)
 
+    printUser("Saputra")
 }
+
+// FUNCTION
+// Pendeklarasian fungsi pada Kotlin diawali dengan kata kunci fun
+fun setUser(name: String, age: Int): String {
+    return "Your name is $name, and you $age years old"
+}
+// jika return hanya 1 expression, bisa ditulis secara singkat
+//fun setUser(nama: String, age: Int): String = "Your name is $nama, and you $age years old"
+
+// fungsi yang tidak mengembalikan nilai
+fun printUser(name: String) {
+    print("Your name is $name")
+}
+// cara memanggil fungsi yang sudah di buat di main
