@@ -71,6 +71,28 @@ fun main(args: Array<String>) {
     print(user)
 
     printUser("Saputra")
+
+    // If Expression ===========================================================================================
+    val openHours = 7
+    val now = 20
+    var office: String
+    var school: String
+    if (now > openHours) {
+       office = "Office already open"
+    } else {
+        office = "Office is closed"
+    }
+    println(office)
+
+    school = if (now > openHours) {
+        "School already open"
+    } else if (now == openHours) {
+        "Wait a minute, office will be open"
+    }else {
+        "School is closed"
+    }
+    println(school)
+    // Kotlin tidak mendukung ternary operator (condition ? then : else)
 }
 
 // FUNCTION
