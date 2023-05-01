@@ -93,9 +93,73 @@ fun main(args: Array<String>) {
     }
     println(school)
     // Kotlin tidak mendukung ternary operator (condition ? then : else)
+
+
+    // Boolean ================================================================
+    val coffeeShopOpen = 7
+    val coffeeShopClosed = 20
+    val today = 20
+
+    // AND &&
+    val isOpen = today >= coffeeShopOpen && today <= coffeeShopClosed
+    println("Coffee Shop is open: $isOpen")
+    // OR ||
+    val isClose = today < coffeeShopOpen || today > coffeeShopClosed
+    println("Coffee Shop closed: $isClose")
+    // NOT (!)
+    if(!isOpen) {
+        print("Coffee Shop is closed")
+    }
+
+    // Numbers =========================================================
+    // Int (32 Bit)
+    val intNumber = 100
+    // Long (64 Bit)
+    val longNumber: Long = 100
+    // val longNumber = 100L
+    //Short (16 Bit)
+    val shortNumber: Short = 10
+    // Byte (8 Bit)
+    val byteNumber = 0b11010010
+    // Double (64 Bit)
+    val doubleNumber: Double = 1.4
+    //Float (32 Bit)
+    val floatNumber: Float = 0.123456789f
+
+    // tips nulis jutaan
+    val readableNumber = 1_000_000
+    print(readableNumber)
+
+    val konversiByte: Int = byteNumber.toInt();
+    /*
+    * toByte(): Byte
+    * toShort(): Short
+    * toInt(): Int
+    * toLong(): Long
+    * toFloat(): Float
+    * toDouble(): Double
+    * toChar(): Char
+    * */
+
+    // Arrays ==============================================================
+    val array = arrayOf(1,3,5,7)
+    val mixArray = arrayOf(1,3,5,7, "Dicoding", true)
+
+    // Array dengan tipe data primitif
+    val intArray = intArrayOf(1,2,3,6,7)
+    print(intArray[2])
+    /*
+    * intArrayOf() : IntArray
+    * booleanArrayOf() : BooleanArray
+    * charArrayOf() : CharArray
+    * longArrayOf() : LongArray
+    * shortArrayOf() : ShortArray
+    * byteArrayOf() : ByteArray
+    * */
+
 }
 
-// FUNCTION
+// FUNCTION ========================================================================
 // Pendeklarasian fungsi pada Kotlin diawali dengan kata kunci fun
 fun setUser(name: String, age: Int): String {
     return "Your name is $name, and you $age years old"
