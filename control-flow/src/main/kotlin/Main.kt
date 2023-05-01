@@ -88,6 +88,23 @@ fun main(args: Array<String>) {
         else -> regis
     }
     println(registerNumber)
+
+    // While ===========================================================
+    // bersifat  Entry Controlled Loop
+    var counter = 1
+    while(counter <= 7) {
+        println("Hello, World!")
+        counter++
+    }
+    println("")
+
+    // Do While ========================================================
+    // Exit Controlled Loop
+    do{
+        println("Hello, world!")
+        counter++
+    } while (counter <= 7)
+    println("")
 }
 
 enum class Colors(val value: Int) {
