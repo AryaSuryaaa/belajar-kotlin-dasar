@@ -165,6 +165,15 @@ fun main(args: Array<String>) {
     if(text != null) {
         val textLength = text.length // ready to go
     }
+
+    // Safe calls operator (?.)
+    text?.length
+
+    // Elvis Operator (?:)
+    val textLength2 = text?.length ?: 7
+    // sama seperti
+    // val textLength = if (text != null) text.length else 7
+
 }
 
 // FUNCTION ========================================================================
