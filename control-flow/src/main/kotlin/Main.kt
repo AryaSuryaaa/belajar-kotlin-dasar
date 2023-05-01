@@ -15,9 +15,28 @@ fun main(args: Array<String>) {
     val colorGreen = Color.GREEN
     val colorBlue = Color.BLUE
 
+    // Mendapatkan daftar objek Enum dan nama
+    val colors: Array<Colors> = enumValues()
+    colors.forEach { color -> println("$color ") }
+
+    // Menandapatkan nama
+    val warna: Colors = Colors.valueOf("RED")
+    println("Color is $warna")
+    println("Color value is ${warna.value.toString(16)}")
+
+    // Posisi tiap objek dengan properti ordinal
+    println("Position GRED is ${warna.ordinal}")
+
+    //when
+    when(warna) {
+        Colors.RED -> println("Color is RED")
+        Colors.GREEN -> println("Color is GREEN")
+        Colors.BLUE -> println("Color is BLUE")
+    }
+
 }
 
-enum class Color(val value: Int) {
+enum class Colors(val value: Int) {
     RED(0xFF0000),
     GREEN(0x00FF00),
     BLUE(0x0000FF)
