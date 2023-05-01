@@ -157,6 +157,14 @@ fun main(args: Array<String>) {
     * byteArrayOf() : ByteArray
     * */
 
+
+    // Nullability ======================================================
+//    val text: String = null (error)
+    val text: String? = null
+    // cara mengakses nilai null
+    if(text != null) {
+        val textLength = text.length // ready to go
+    }
 }
 
 // FUNCTION ========================================================================
