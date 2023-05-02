@@ -52,4 +52,8 @@ fun main() {
     // Konsol akan langsung memberi tahu apakah kedua objek tersebut sama atau tidak
     println(dataUser.equals(dataUser2))
     println(dataUser.equals(dataUser3))
+
+    // Menyalin dan memodifikasi Data Class =======================================
+    val dataUser4 = dataUser.copy(age = 20)
+    println(dataUser4)
 }
