@@ -119,6 +119,30 @@ fun main(args: Array<String>) {
     // .. bisa digantikan dengan downTo(10) atau rangeTo()
     // range support dengan intRange, longRange, charRange
 
+    // FOR LOOP ================================================================
+    // dapat digunakan pada Ranges, Collections, Arrays dan apapun yg true
+    val ranges = 1.rangeTo(5)
+    for(i in ranges) {
+        println("value is $i")
+    }
+    // Mengakses index yg ada di ranges
+    for ((index, value ) in ranges.withIndex()) {
+        println("value $value, with index $index")
+    }
+
+    //forEach pada kode di bawah merupakan sebuah lambda expression yang hanya memiliki satu argumen yaitu nilai tunggal yang dicakup pada ranges
+    ranges.forEach{
+        value -> println("values is $value")
+    }
+    // forEachIndexed memiliki dua argumen.
+    ranges.forEachIndexed{
+        index, value -> println("value $value with index $index")
+    }
+    // sebuah lambda expression tidak digunakan, kita disarankan agar mengubahnya menjadi _
+    ranges.forEachIndexed{
+        index, _ -> println("index")
+    }
+
 
 
 }
