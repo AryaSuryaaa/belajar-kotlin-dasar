@@ -143,6 +143,27 @@ fun main(args: Array<String>) {
         index, _ -> println("index")
     }
 
+    // Break and Continue ==================================================================
+    val listOfInt = listOf(1,2,3,null,5,null,7)
+
+    for(i in listOfInt) {
+       //  if(i == null ) continue // output 12357
+        if(i == null ) break // output 123
+        print(i)
+    }
+
+    println("")
+
+    // label pada break dan continue
+    loop@ for(i in 1..10) {
+        println("Outside Loop")
+
+        for(j in 1..10) {
+            println("Inside Loop")
+            if(j > 5) break@loop
+        }
+    }
+
 
 
 }
