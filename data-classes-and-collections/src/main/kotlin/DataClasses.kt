@@ -73,5 +73,39 @@ fun main() {
 
     println("My name is $name, I am $age years old" + dataUser.address())
 
+    // COLLECTIONS ====================================================================================================
+    // dalam collections terdapat beberapa objek turunan, di antaranya adalah List, Set, dan Map.
+
+    // list
+    //  List tersebut bersifat immutable alias tidak bisa diubah.
+    val numberList = listOf(1,2,3,4,5)
+    val charList = listOf('a', 'b', 'c')
+    val anyList = listOf('a', "Kotlin", 3, true)
+
+    println(numberList[3])
+    for(i in charList) {
+        print("$i ")
+    }
+    println("")
+    for (i in anyList) {
+        print("$i ")
+    }
+    println("")
+
+    // mengubah list menjadi mutable,
+    // dpt melakukan menambah, menghapus, atau mengganti nilai yang sudah ada.
+    val mutableList = mutableListOf('a', "kotlin", 3, true, User("arya", 18))
+
+    mutableList.add('d') // menambah item di akhir List
+    mutableList.add(1, "love") // menambah item pada indeks ke-1
+    mutableList[3] = false // mengubah nilai item pada indeks ke-3
+    mutableList.removeAt(0) // menghapus item pada indeks ke-0
+
+    for (i in mutableList) {
+        print("$i ")
+    }
+
+
+
 
 }
