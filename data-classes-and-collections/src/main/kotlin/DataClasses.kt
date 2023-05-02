@@ -133,5 +133,31 @@ fun main() {
     mutableSet.remove(1) //bukan remove index melainkan element 1
     println(mutableSet)
 
+    // Map ==================================
+    // sebuah collection yang dapat menyimpan data dengan format key-value.
+    val capital = mapOf(
+        //key         //value
+        "Jakarta" to "Indoneisa",
+        "London" to "England",
+        "New Delhi" to "Indoa"
+    )
+    // mengakses value
+    println(capital["Jakarta"]) // jika kosong -> null
+    // atau
+    println(capital.getValue("Jakarta")) // jika kosong
 
+    // menampilkan key apa saja yang ada di dalam Map
+    val mapKeys = capital.keys
+    // keys mengembalikan nilai berupa Set karena keys harus Unik
+    println(mapKeys)
+
+    // menampilkan values yang ada
+    val mapValues = capital.values
+    // values mengembalikan data berupa collection
+    println(mapValues)
+
+    // menambahkan data
+    // ubah menjadi mutable
+    val mutableMap = capital.toMutableMap()
+    mutableMap.put("Berlin", "Germany")
 }
