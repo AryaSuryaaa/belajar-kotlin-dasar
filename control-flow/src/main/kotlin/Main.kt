@@ -105,6 +105,22 @@ fun main(args: Array<String>) {
         counter++
     } while (counter <= 7)
     println("")
+
+    // RANGE =============================================================
+    // 1 langkah maju kedepan (default)
+    val rangeInt = 1..10
+    println(rangeInt.step) //output 1
+
+    // Mengatur langkah range
+    val stepRange = 1..10 step 2
+    stepRange.forEach {
+        print("$it ")
+    }
+    // .. bisa digantikan dengan downTo(10) atau rangeTo()
+    // range support dengan intRange, longRange, charRange
+
+
+
 }
 
 enum class Colors(val value: Int) {
