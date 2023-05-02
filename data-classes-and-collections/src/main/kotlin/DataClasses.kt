@@ -31,7 +31,12 @@ class User(val name: String, val age: Int) {
 
 // data class otomatis memiliki fungsi toString
 // memiliki fungsi equals() otomatis
-data class DataUser(val name: String, val age: Int)
+data class DataUser(val name: String, val age: Int) {
+    // menambahkan behaviour
+    fun address() {
+        println("i live at Bandung")
+    }
+}
 
 fun main() {
     val user = User("nrohmen", 17)
@@ -56,4 +61,17 @@ fun main() {
     // Menyalin dan memodifikasi Data Class =======================================
     val dataUser4 = dataUser.copy(age = 20)
     println(dataUser4)
+
+    // Destructuring Declarations
+    // adalah proses memetakan objek menjadi sebuah variabel.
+    val name = dataUser.component1()
+    val age = dataUser.component2()
+    // cara cepat
+    // val (name, age) = dataUser
+
+
+
+    println("My name is $name, I am $age years old" + dataUser.address())
+
+
 }
