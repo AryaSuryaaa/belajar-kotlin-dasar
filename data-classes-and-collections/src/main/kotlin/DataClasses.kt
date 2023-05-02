@@ -76,16 +76,14 @@ fun main() {
     // COLLECTIONS ====================================================================================================
     // dalam collections terdapat beberapa objek turunan, di antaranya adalah List, Set, dan Map.
 
-    // list
+    // list ================
     //  List tersebut bersifat immutable alias tidak bisa diubah.
     val numberList = listOf(1,2,3,4,5)
     val charList = listOf('a', 'b', 'c')
     val anyList = listOf('a', "Kotlin", 3, true)
 
     println(numberList[3])
-    for(i in charList) {
-        print("$i ")
-    }
+    print(charList)
     println("")
     for (i in anyList) {
         print("$i ")
@@ -104,8 +102,36 @@ fun main() {
     for (i in mutableList) {
         print("$i ")
     }
+    println("")
 
+    // Set ===========================
+    // merupakan sebuah collection yang hanya dapat menyimpan nilai yang unik.
+    // tidak ada data yang sama atau duplikasi
+    val integerSet = setOf(1,2,4,2,1,5)
+    print(integerSet)
+    println("")
 
+    // urutan bukan hal yang penting
+    val setB = setOf(5,1,4,2,1,5)
+    println(integerSet == setB)
+
+    // mengecek keberadaan
+    println(5 in setB)
+
+    // menggabungkan (union) dan irisan (intersect)
+    val setA = setOf(1,4,8,9,10)
+    val union = setB.union(setA)
+    val intersect = setB.intersect(setA)
+
+    println(union)
+    println(intersect)
+
+    // Pada Mutable Set kita bisa menambah dan menghapus item namun tak bisa mengubah nilai seperti pada List.
+    val mutableSet = mutableListOf(1,2,3,4,5)
+    //mutableSet[2] = 6 // tidak bisa mengubah set immutable
+    mutableSet.add(6)
+    mutableSet.remove(1) //bukan remove index melainkan element 1
+    println(mutableSet)
 
 
 }
