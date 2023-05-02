@@ -202,4 +202,18 @@ fun main() {
 
     val descendingSort = kotlinChar.sortedDescending()
     println(descendingSort)
+
+    // Sequencea ==========================================================================
+    val list = (1..10000000).toList()
+    //list.filter { it % 5 == 0 }.map { it * 2 }.forEach { println(it) }
+    // Dengan eager evaluation atau dikenal dengan horizontal evaluation, list akan menyelesaikan proses filter terhadap 1 juta data baru kemudian melakukan mapping data sampai akhirnya ditampilkan pada konsol
+    // lama bannget
+    //list.asSequence().filter { it % 5 == 0 }.map { it *2 }.forEach { println(it) }
+    /*
+    * operasi akan dilakukan secara vertikal atau per item, misalnya dimulai angka 1. Karena tidak memenuhi kondisi
+    * pada filter maka operasi tidak akan dilanjutkan ke map(). Sampai dengan iterasi ke-5 akan dilakukan mapping, angka 5 akan
+    * dikalikan 2 dan ditampilkan pada konsol, setelah itu akan dilanjutkan ke iterasi berikutnya sampai dengan iterasi ke-1 juta.
+    * */
+    val sequenceNumber = generateSequence(1) { it + 1 }
+    sequenceNumber.take(5).forEach { print("$it ") }
 }
