@@ -160,4 +160,46 @@ fun main() {
     // ubah menjadi mutable
     val mutableMap = capital.toMutableMap()
     mutableMap.put("Berlin", "Germany")
+
+    // Collections Operations =====================================================================
+    // fungsi operasi yang bisa kita gunakan untuk mengakses data di dalam collections
+    val numbersList = listOf(1,2,3,4,5,6,7,8,9,10)
+    // filter
+    val evenList = numbersList.filter { it % 2 == 0 }
+    println(evenList)
+    val notEvenList = numbersList.filterNot { it % 2 == 0 }
+    println(notEvenList)
+
+    // map
+    val multipliedby5 = numbersList.map { it * 5 }
+    println(multipliedby5)
+
+    // count
+    println(numbersList.count())
+    println(numbersList.count{it % 3 == 0})
+
+    // find
+    val fisrtOddNumber = numbersList.find { it % 2 == 1 }
+    val fisrtOrNullNumber = numbersList.firstOrNull { it % 2 == 3 }
+    val lastOddNumber = numbersList.lastOrNull { it % 2 == 1 }
+    println(fisrtOddNumber)
+    println(fisrtOrNullNumber)
+    println(lastOddNumber)
+
+    // first and last
+    val moreThan6 = numbersList.first { it > 6}
+    println(moreThan6)
+    println(numbersList.last())
+
+    // sum
+    val total = numbersList.sum()
+    println(total)
+
+    // sorted
+    val kotlinChar = listOf('k','o','t', 'l', 'i', 'n')
+    val ascendingSort = kotlinChar.sorted() // abc
+    println(ascendingSort)
+
+    val descendingSort = kotlinChar.sortedDescending()
+    println(descendingSort)
 }
